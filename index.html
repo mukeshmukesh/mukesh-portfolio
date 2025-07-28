@@ -1,215 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mukesh Yadav - Product Evangelist</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #2c3e50;
-    }
-
-    header {
-      background: #0d253f;
-      color: #fff;
-      padding: 3rem 1rem 2rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .hero img {
-      max-width: 400px;
-      margin-top: 2rem;
-    }
-
-    nav {
-      margin-top: 1rem;
-    }
-
-    nav a {
-      color: #00bcd4;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 1rem auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    h2 {
-      color: #0d253f;
-      margin-bottom: 1rem;
-    }
-
-    .hobby-list {
-      list-style: none;
-      padding-left: 0;
-      font-size: 1.1rem;
-    }
-
-    .hobby-list li {
-      margin-bottom: 0.5rem;
-      line-height: 1.5;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      object-fit: cover;
-    }
-
-    #bmi-output {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eaeaea;
-      font-size: 0.9rem;
-    }
-  </style>
+  <title>Mukesh Yadav - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="hero">
-      <h1>Mukesh Yadav</h1>
-      <p>Senior Product Manager | Fintech & Insurtech | AI & Analytics Driven</p>
-      <img src="https://undraw.co/api/illustrations/2a7e0486-b67b-4384-b90e-77659c2c59a4" alt="Hero Illustration">
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#hobbies">Hobbies</a>
-      <a href="#gallery">Photos</a>
-      <a href="#bmi">BMI Calculator</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="container">
+    <h1>Mukesh Yadav</h1>
+    <p>Welcome to my personal site! Explore my work, hobbies, and thoughts.</p>
 
-  <section id="about">
     <h2>About Me</h2>
-    <p>
-      Analytical Product Manager with 12+ years of experience building and scaling data-driven digital platforms
-      across fintech, insurtech, and customer engagement. I specialize in zero-to-one development, A/B testing,
-      and AI-enabled personalization. Beyond work, I’m an explorer of ideas, a lifelong learner, and an advocate for
-      thoughtful product design.
-    </p>
-  </section>
+    <img src="images/profile.jpg" alt="Mukesh" class="profile-img"/>
+    <p>I’m a product manager working in fintech and insurtech with a passion for building impactful digital experiences.</p>
 
-  <section id="experience">
-    <h2>Experience</h2>
+    <h2>Hobbies</h2>
     <ul>
-      <li><strong>Product Lead – Digit Insurance</strong> – Built a digital platform generating ₹10M+/month; launched AI chatbot, led agile squads.</li>
-      <li><strong>BI Lead – HGS</strong> – Delivered 300% business growth via analytics; built ML-based fraud models.</li>
-      <li><strong>Data Analyst – Formcept</strong></li>
-      <li><strong>Business Analyst – Mu Sigma</strong></li>
+      <li>Photography</li>
+      <li>Traveling</li>
+      <li>Reading</li>
+      <li>Running 🏃</li>
     </ul>
-  </section>
+    <img src="images/running.jpg" alt="Running" class="hobby-img"/>
 
-  <section id="hobbies">
-    <h2>Hobbies & Interests</h2>
-    <ul class="hobby-list">
-      <li>📚 Reading books on psychology and product thinking</li>
-      <li>✈️ Traveling to hidden gems and cultural cities</li>
-      <li>📷 Street photography and candid captures</li>
-      <li>🎧 Listening to podcasts on AI, tech, and philosophy</li>
-      <li>🎮 Gaming, teardown analysis, and storytelling</li>
-    </ul>
-  </section>
-
-  <section id="gallery">
-    <h2>My Collection</h2>
-    <p>A glimpse into my adventures, inspirations, and moments I’ve loved capturing.</p>
-    <div class="gallery">
-      <img src="images2/profile.jpg" alt="Mukesh" />
-      <img src="images2/travel.jpg" alt="Travel" />
-      <img src="images2/running.jpg" alt="Running" />
-      <img src="images2/hobby.jpg" alt="Hobby" />
-    </div>
-  </section>
-
-  <section id="bmi">
     <h2>BMI Calculator</h2>
-    <label for="height">Height (cm): <span id="height-val">170</span> cm</label><br>
-    <input type="range" id="height" min="100" max="250" value="170"><br><br>
-    <label for="weight">Weight (kg): <span id="weight-val">70</span> kg</label><br>
-    <input type="range" id="weight" min="30" max="200" value="70"><br><br>
-    <div id="bmi-output">Your BMI: --</div>
-  </section>
+    <label>Height (cm): <input type="range" id="heightSlider" min="100" max="220" value="170" oninput="updateBMI()"/></label>
+    <span id="heightValue">170 cm</span><br/>
+    <label>Weight (kg): <input type="range" id="weightSlider" min="30" max="150" value="70" oninput="updateBMI()"/></label>
+    <span id="weightValue">70 kg</span>
+    <div id="bmiResult"></div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mukesh.yadav1908@gmail.com">mukesh.yadav1908@gmail.com</a></p>
-    <p>Phone: +91 8884098000</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/mukeshy" target="_blank">linkedin.com/in/mukeshy</a></p>
-  </section>
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
 
-  <footer>
-    <p>© 2025 Mukesh Yadav. Built with ❤️ for curiosity and connection.</p>
-  </footer>
+    <h2>Login</h2>
+    <p id="userInfo"></p>
+    <button id="loginBtn">Login with Google</button>
+    <button id="logoutBtn" style="display:none;">Logout</button>
 
+    <form id="commentForm" style="display:none;">
+      <textarea id="comment" required placeholder="Write your comment..."></textarea><br>
+      <button type="submit">Post Comment</button>
+    </form>
+    <div id="comments"><h3>Comments:</h3></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script id="dsq-count-scr" src="//YOUR_SHORTNAME.disqus.com/count.js" async></script>
   <script>
-    const heightSlider = document.getElementById('height');
-    const weightSlider = document.getElementById('weight');
-    const heightVal = document.getElementById('height-val');
-    const weightVal = document.getElementById('weight-val');
-    const bmiOutput = document.getElementById('bmi-output');
-
-    function calculateBMI() {
-      const height = parseInt(heightSlider.value);
-      const weight = parseInt(weightSlider.value);
-      const bmi = (weight / ((height / 100) ** 2)).toFixed(1);
-      bmiOutput.textContent = "Your BMI: " + bmi;
-    }
-
-    heightSlider.addEventListener('input', () => {
-      heightVal.textContent = heightSlider.value;
-      calculateBMI();
-    });
-
-    weightSlider.addEventListener('input', () => {
-      weightVal.textContent = weightSlider.value;
-      calculateBMI();
-    });
-
-    calculateBMI();
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = "home";
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://YOUR_SHORTNAME.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
   </script>
 </body>
 </html>

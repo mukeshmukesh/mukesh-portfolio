@@ -1,0 +1,22 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #f0f0f0, #e0f7fa);
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+img.profile-img, img.hobby-img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+textarea {
+  width: 100%;
+  height: 80px;
+}
