@@ -1,5 +1,4 @@
 
-// BMI calculator
 function updateBMI() {
   const height = parseInt(document.getElementById("heightSlider").value);
   const weight = parseInt(document.getElementById("weightSlider").value);
@@ -15,7 +14,3 @@ function updateBMI() {
   document.getElementById("bmiResult").innerHTML = "BMI: " + bmi.toFixed(2) + " (" + status + ")";
 }
 updateBMI();
-
-// Firebase Auth (placeholder)
-document.getElementById("loginBtn").onclick = () => alert("Google login coming soon...");
-document.getElementById("logoutBtn").onclick = () => alert("Logout...");
