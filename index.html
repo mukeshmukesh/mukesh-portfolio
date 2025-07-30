@@ -14,6 +14,7 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#hobbies">Hobbies</a>
+      <a href="#bmi">BMI</a>
       <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -60,6 +61,22 @@
     </p>
   </section>
 
+  <section id="bmi">
+    <h2>BMI Calculator</h2>
+    <label for="height">Height (cm):</label>
+    <input type="range" id="height" min="100" max="220" value="170" oninput="calculateBMI()" />
+    <span id="heightValue">170 cm</span><br><br>
+
+    <label for="weight">Weight (kg):</label>
+    <input type="range" id="weight" min="30" max="200" value="70" oninput="calculateBMI()" />
+    <span id="weightValue">70 kg</span><br><br>
+
+    <div id="bmiResult">
+      <img id="bmiIcon" src="images/bmi-gauge.png" alt="" style="height: 60px; display: none;" />
+      <p id="bmiText">Your BMI will appear here.</p>
+    </div>
+  </section>
+
   <section id="blog">
     <h2>Blog</h2>
     <p>Coming soon – reflections on product strategy, AI in business, and real-world problem solving.</p>
@@ -75,5 +92,33 @@
   <footer>
     <p>© 2025 Mukesh Yadav. Built with ❤️ for curiosity and connection.</p>
   </footer>
+
+  <script>
+    function calculateBMI() {
+      const height = parseInt(document.getElementById('height').value);
+      const weight = parseInt(document.getElementById('weight').value);
+      document.getElementById('heightValue').innerText = height + ' cm';
+      document.getElementById('weightValue').innerText = weight + ' kg';
+
+      const heightInM = height / 100;
+      const bmi = weight / (heightInM * heightInM);
+      let status = '';
+
+      if (bmi < 18.5) status = 'Underweight';
+      else if (bmi < 25) status = 'Healthy';
+      else if (bmi < 30) status = 'Overweight';
+      else status = 'Obese';
+
+      document.getElementById('bmiText').innerText = `BMI: ${bmi.toFixed(2)} (${status})`;
+      const icon = document.getElementById('bmiIcon');
+      icon.style.display = 'inline';
+      if (status === 'Underweight') icon.src = 'images/underweight.png';
+      else if (status === 'Healthy') icon.src = 'images/healthy.png';
+      else if (status === 'Overweight') icon.src = 'images/overweight.png';
+      else icon.src = 'images/obese.png';
+    }
+
+    calculateBMI();
+  </script>
 </body>
 </html>
