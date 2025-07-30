@@ -4,32 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mukesh Yadav - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>Mukesh Yadav</h1>
-    <p>Welcome to my personal site! Explore my work, hobbies, and thoughts.</p>
+    <p>Welcome to my personal space! I’m a product manager with a strong background in fintech and insurtech. Scroll down to learn about my professional journey, personal hobbies, projects, and more!</p>
+
+    <h2>About Me</h2>
+    <img src="images/profile.jpg" alt="Mukesh Yadav" class="profile-img"/>
+    <p>I specialize in building scalable digital products and optimizing customer journeys with data-driven insights. My experience spans across product management, data analytics, and growth strategy.</p>
 
     <h2>Hobbies</h2>
     <ul>
-      <li>Photography</li>
-      <li>Traveling</li>
-      <li>Reading</li>
-      <li>Running</li>
+      <li>📷 Photography</li>
+      <li>🌍 Traveling</li>
+      <li>📖 Reading</li>
+      <li>🏃 Running</li>
     </ul>
+    <img src="images/running.jpg" alt="Running" class="hobby-img"/>
+
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="Photo 1" />
+      <img src="images/photo2.jpg" alt="Photo 2" />
+      <img src="images/photo3.jpg" alt="Photo 3" />
+    </div>
 
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
         <img src="images/product-icon.png" class="project-icon" alt="Product Icon" />
         <h3>Customer Journey Optimization</h3>
-        <p>Redesigned insurance purchase flow with payment-first model and KYC post-payment. Boosted conversion by 1.5×.</p>
+        <p>Redesigned insurance purchase flow with KYC post-payment and AMP optimization. <a href="https://github.com/mukeshmukesh/mukesh-portfolio" target="_blank">Read more</a></p>
+      </div>
+      <div class="project-card">
+        <img src="images/api-icon.png" class="project-icon" alt="API Icon" />
+        <h3>CRM & Data Warehouse API</h3>
+        <p>Integrated CRM and DWH with product systems to streamline analytics. <a href="https://github.com/mukeshmukesh/mukesh-portfolio" target="_blank">Read more</a></p>
       </div>
       <div class="project-card">
         <img src="images/analytics-icon.png" class="project-icon" alt="Analytics Icon" />
-        <h3>Analytics Setup</h3>
-        <p>Implemented Adobe and GA4 analytics across web and app to unlock behavioral and funnel insights.</p>
+        <h3>Web & App Analytics</h3>
+        <p>Adobe and GA4 setup for advanced attribution and event tracking. <a href="https://github.com/mukeshmukesh/mukesh-portfolio" target="_blank">Read more</a></p>
+      </div>
+      <div class="project-card">
+        <img src="images/payment-icon.png" class="project-icon" alt="Payment Icon" />
+        <h3>Payment Funnel Optimization</h3>
+        <p>Identified and fixed drop-offs in payment flows to boost success rate. <a href="https://github.com/mukeshmukesh/mukesh-portfolio" target="_blank">Read more</a></p>
+      </div>
+      <div class="project-card">
+        <img src="images/dashboard-icon.png" class="project-icon" alt="Dashboard Icon" />
+        <h3>Sales Dashboards</h3>
+        <p>Live telesales tracking dashboards for agent productivity. <a href="https://github.com/mukeshmukesh/mukesh-portfolio" target="_blank">Read more</a></p>
+      </div>
+      <div class="project-card">
+        <img src="images/forecast-icon.png" class="project-icon" alt="Forecast Icon" />
+        <h3>Lead Forecasting</h3>
+        <p>Python-based forecast models integrated with Power BI for volume trends. <a href="https://github.com/mukeshmukesh/mukesh-portfolio" target="_blank">Read more</a></p>
       </div>
     </div>
 
@@ -39,6 +71,13 @@
     <label>Weight (kg): <input type="range" id="weightSlider" min="30" max="150" value="70" oninput="updateBMI()" /></label>
     <span id="weightValue">70 kg</span>
     <div id="bmiResult"></div>
+
+    <h2>Comments</h2>
+    <p><em>Login with Google to comment or post as a guest anonymously</em></p>
+    <div id="comment-box">
+      <!-- Placeholder for Firebase-based or Disqus comment box -->
+      <p><em>Comment system coming soon via Firebase integration.</em></p>
+    </div>
   </div>
 
   <script src="script.js"></script>
