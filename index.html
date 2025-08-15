@@ -1,139 +1,16 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mushkeela — Build, Ship, Smile</title>
-  <meta name="description" content="Mushkeela: product, data, and delightful web experiences." />
-  <link href="styles.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">mushkeela<span class="brand-dot">.</span></a>
-      <nav>
-        <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
-        <ul id="navMenu" class="nav-menu">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><button id="themeToggle" class="btn small" type="button">🌙</button></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <img class="hero-bg" alt="Abstract tech background" 
-         src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1" />
-    <div class="container hero-inner">
-      <h1>Build, Ship, <span class="accent">Smile</span>.</h1>
-      <p>Product strategy, data storytelling, and web experiences that feel ✨polished.</p>
-      <div class="cta-row">
-        <a class="btn primary" href="services.html">See Services</a>
-        <a class="btn" href="about.html">Learn More</a>
-      </div>
-      <div class="stats">
-        <div><span class="count" data-target="25">0</span><small>Products Touched</small></div>
-        <div><span class="count" data-target="120">0</span><small>Experiments Run</small></div>
-        <div><span class="count" data-target="98">0</span><small>Happy Clients (%)</small></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container grid-3 feature-cards">
-    <article class="card">
-      <img alt="Dashboard preview" src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" />
-      <h3>Data-Driven Decisions</h3>
-      <p>From KPIs to causal insights—turn raw data into actions your team trusts.</p>
-      <a class="link" href="services.html#analytics">Explore Analytics →</a>
-    </article>
-    <article class="card">
-      <img alt="Developer workspace" src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" />
-      <h3>Modern Web Builds</h3>
-      <p>Fast, accessible, SEO-friendly sites that look great on any device.</p>
-      <a class="link" href="services.html#web">See Web Offering →</a>
-    </article>
-    <article class="card">
-      <img alt="Team collaboration" src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" />
-      <h3>Product Strategy</h3>
-      <p>Align roadmaps with outcomes. MVPs, discovery, and launch playbooks.</p>
-      <a class="link" href="about.html#approach">Our Approach →</a>
-    </article>
-  </section>
-
-  <section class="container fun-section" id="fun">
-    <div class="fun-left">
-      <h2>🎲 Tiny Fun Corner</h2>
-      <p>Roll a dice, flip a coin, or try your luck. Zero APIs. 100% joy.</p>
-      <div class="fun-controls">
-        <button class="btn" id="rollDice">Roll Dice</button>
-        <button class="btn" id="flipCoin">Flip Coin</button>
-        <button class="btn" id="party">Confetti!</button>
-      </div>
-      <div class="fun-output" id="funOutput">Ready…</div>
-    </div>
-    <div class="fun-right">
-      <h3>Newsletter (no spam)</h3>
-      <p>Occasional ideas on product, data, & design.</p>
-      <form class="inline-form" onsubmit="event.preventDefault();subscribeNews(this);">
-        <input required type="email" name="email" placeholder="you@domain.com" />
-        <button class="btn primary" type="submit">Subscribe</button>
-      </form>
-      <div id="newsMsg" class="muted"></div>
-    </div>
-  </section>
-
-  <section class="strip">
-    <div class="container strip-inner">
-      <h2>Latest from the Blog</h2>
-      <p>Fresh ideas, practical walkthroughs, and product notes.</p>
-      <div class="strip-cards">
-        <a class="mini-card" href="post-ai-roadmap.html">
-          <img alt="Neon circuits" src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" />
-          <div><h4>Designing an AI-Ready Roadmap</h4><small>5 min read</small></div>
-        </a>
-        <a class="mini-card" href="post-ab-testing.html">
-          <img alt="A/B testing" src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" />
-          <div><h4>A/B Testing: From Hypothesis to Impact</h4><small>7 min read</small></div>
-        </a>
-        <a class="mini-card" href="post-web-performance.html">
-          <img alt="Performance speed" src="https://images.pexels.com/photos/1181313/pexels-photo-1181313.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" />
-          <div><h4>Speed First: Web Perf that Converts</h4><small>4 min read</small></div>
-        </a>
-      </div>
-      <p><a class="link" href="blog.html">Browse all posts →</a></p>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand brand-footer">mushkeela<span class="brand-dot">.</span></div>
-        <p class="muted">Crafted with care in HTML/CSS/JS. Images via Pexels (free to use).</p>
-      </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Say Hi</h5>
-        <ul>
-          <li><a href="mailto:hello@mushkeela.space">hello@mushkeela.space</a></li>
-          <li><a href="contact.html">Contact form</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container tiny muted">© <span id="year"></span> Mushkeela — All good vibes.</div>
-  </footer>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Mukesh Yadav — Product & Data | Mushkeela</title><meta name="description" content="Mukesh Yadav — Product leader blending analytics, experimentation, and web craft."/><link href="styles.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"><script defer src="script.js"></script></head><body>
+<header class="site-header"><div class="container nav"><a class="brand" href="index.html">mushkeela<span class="brand-dot">.</span></a><nav><button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button><ul id="navMenu" class="nav-menu"><li><a class="active" href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="thread.html">Thread</a></li><li><a href="contact.html">Contact</a></li><li><a class="btn small" href="https://www.linkedin.com/in/mukeshy/" target="_blank" rel="noopener">in</a></li><li><button id="themeToggle" class="btn small" type="button">🌙</button></li></ul></nav></div></header>
+<section class="hero"><img class="hero-bg" alt="Abstract tech background" src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1"/><div class="container hero-inner"><h1>Hi, I'm <span class="accent">Mukesh Yadav</span>.</h1><p>Product & Data leader with 12+ years in fintech and insurance. I ship outcomes with experimentation, analytics, and crisp UX.</p><div class="cta-row"><a class="btn primary" href="services.html">See Services</a><a class="btn" href="about.html">Resume Highlights</a></div><div class="stats"><div><span class="count" data-target="10">0</span><small>Mn+/mo revenue platform</small></div><div><span class="count" data-target="50">0</span><small>% conversion uplift</small></div><div><span class="count" data-target="75">0</span><small>% queries reduced via AI</small></div></div></div></section>
+<section class="container grid-3 feature-cards">
+<article class="card"><img alt="Dashboard preview" src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"/><h3>Experiment & Measure</h3><p>Metric trees, guardrails, and clean A/B designs that drive confidence.</p><a class="link" href="services.html#analytics">Explore Analytics →</a></article>
+<article class="card"><img alt="Developer workspace" src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"/><h3>Build Fast Web</h3><p>High-performance, accessible sites with delightful micro-interactions.</p><a class="link" href="services.html#web">See Web Offering →</a></article>
+<article class="card"><img alt="Team collaboration" src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"/><h3>Product Strategy</h3><p>Outcome-based roadmaps and thin-slice shipping to learn faster.</p><a class="link" href="about.html#approach">My Approach →</a></article>
+</section>
+<section class="container fun-section" id="fun"><div class="fun-left"><h2>🎲 Tiny Fun Corner</h2><p>Roll a dice, flip a coin, or try your luck. Zero APIs. 100% joy.</p><div class="fun-controls"><button class="btn" id="rollDice">Roll Dice</button><button class="btn" id="flipCoin">Flip Coin</button><button class="btn" id="party">Confetti!</button></div><div class="fun-output" id="funOutput">Ready…</div></div><div class="fun-right"><h3>Newsletter (no spam)</h3><p>Occasional ideas on product, data, & design.</p><form class="inline-form" onsubmit="event.preventDefault();subscribeNews(this);"><input required type="email" name="email" placeholder="you@domain.com"/><button class="btn primary" type="submit">Subscribe</button></form><div id="newsMsg" class="muted"></div></div></section>
+<section class="strip"><div class="container strip-inner"><h2>Latest from the Blog</h2><p>Fresh ideas, practical walkthroughs, and product notes.</p><div class="strip-cards">
+<a class="mini-card" href="post-ai-roadmap.html"><img alt="Neon circuits" src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"/><div><h4>Designing an AI-Ready Roadmap</h4><small>5 min read</small></div></a>
+<a class="mini-card" href="post-ab-testing.html"><img alt="A/B testing" src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"/><div><h4>A/B Testing: From Hypothesis to Impact</h4><small>7 min read</small></div></a>
+<a class="mini-card" href="post-web-performance.html"><img alt="Performance speed" src="https://images.pexels.com/photos/1181313/pexels-photo-1181313.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"/><div><h4>Speed First: Web Perf that Converts</h4><small>4 min read</small></div></a>
+</div><p><a class="link" href="blog.html">Browse all posts →</a></p></div></section>
+<footer class="site-footer"><div class="container footer-grid"><div><div class="brand brand-footer">mushkeela<span class="brand-dot">.</span></div><p class="muted">Images via Pexels (free to use). Connect on <a class="link" href="https://www.linkedin.com/in/mukeshy/" target="_blank" rel="noopener">LinkedIn</a>.</p></div><div><h5>Explore</h5><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="thread.html">Thread</a></li></ul></div><div><h5>Say Hi</h5><ul><li><a href="mailto:mukesh.yadav1908@gmail.com">mukesh.yadav1908@gmail.com</a></li><li><a href="contact.html">Contact form</a></li></ul></div></div><div class="container tiny muted">© <span id="year"></span> Mukesh Yadav</div></footer>
+</body></html>

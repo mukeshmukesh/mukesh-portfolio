@@ -1,14 +1,13 @@
-# Mushkeela Site (Pexels Images)
-Static multi-page site (HTML/CSS/JS). All images load from https://images.pexels.com and are free-to-use under Pexels License.
+# Mushkeela Site (Pexels + Personalized + Thread)
+Static multi-page site (HTML/CSS/JS) personalized for Mukesh Yadav, with a Thread & Comments page (localStorage).
 
-Pages:
-- index.html
-- about.html
-- services.html
-- blog.html
-- post-ai-roadmap.html
-- post-ab-testing.html
-- post-web-performance.html
-- contact.html
+Direct entry points:
+- Home: index.html
+- About: about.html
+- Services: services.html
+- Blog index: blog.html
+- Start a thread: thread.html  ← Use this URL to land directly on threads
+- Contact: contact.html
+- Sample posts: post-ai-roadmap.html, post-ab-testing.html, post-web-performance.html
 
-Deploy anywhere (cPanel, Netlify, GitHub Pages). No build step required.
+Deploy anywhere (Netlify, Vercel, GitHub Pages, cPanel). No build step required.
